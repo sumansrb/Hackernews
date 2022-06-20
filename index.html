@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker News</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+  <style>
+    a:link { text-decoration: none; }
+  </style>
+    <div ng-app="myApp" class="mainContainer bg-dark">
+        <nav class="nav bg-warning">
+            <div class="">
+              <h3 class="main-title p-2 text-danger" id="color-change">HACKER NEWS</h3>
+              <a ng-href="#!/topStories" class="p-2 text-secondary" id="top">Top Stories</a>
+              <a ng-href="#!/newStories" class="p-2 text-secondary" id="newStories">New Stories</a>
+              <a ng-href="#!/bestStories" class="p-2 text-secondary" id="bestStories">Best Stories</a>
+            </div>
+          </nav>
+          <div class="detailContainer">
+            <table>
+              <tbody ng-view>
+                <p class="mt-2 text-light">Welcome to <strong>Hacker News</strong></p>
+              </tbody>
+            </table>
+          </div>
+    </div>
+
+    <script src="./main.js"> </script>
+    <script src="./topStories.js"></script>
+    <script src="./newStories.js"></script>
+    <script src="./bestStories.js"></script>
+    <script src="./details.js"></script>
+</body>
+</html>

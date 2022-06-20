@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h2>Hacker News</h2></title>
+</head>
+<body>
+    <style>
+        table {
+           width: max-content;
+           margin: auto;
+           width: 90%;
+           background-color: darkgray;
+       }
+       </style>
+    <div  class="mainContainer" ng-controller="newStoriesCtrl">
+        <div class="detailContainer text-danger">
+            <h1 class="text-warning mb-4">New Stories</h1>
+            <table>
+                <tbody>
+                    <tr ng-repeat="item in data" id="tr">
+                        <td class="text-danger p-2"><div class="bg-white">{{item.title}}</div></td>
+                        <td><a ng-href="#!/details"><button class='btn btn-warning btn-sm text-danger' id="details" ng-click="handleClick(item.id)">Details</button></a></td>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./newStories.js"></script>
+</body>
+</html>

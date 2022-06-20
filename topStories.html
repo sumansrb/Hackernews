@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker News(Top Stories)</title>
+</head>
+<body>
+    <style>
+     table {
+        width: max-content;
+        margin: auto;
+        width: 90%;
+        background-color: wheat;
+    }
+    </style>
+    <div  class="mainContainer" ng-controller="topStoriesCtrl">
+        <div>
+            <table>
+                <tbody >
+                    <h1 class="text-secondary">Top Stories</h1>
+                    <br>
+                <div class="lines">
+                   <h1 id="headLines">
+                </h1>
+                </div>
+                <table>
+                    <tbody>
+
+                        <tr ng-repeat="item in data" id="tr">
+                            <td class='text-secondary p-2'><div class="bg-light">{{item.title}}</div></td>
+                            <td><a ng-href="#!/details"><button class='btn btn-secondary btn-sm' id="details" ng-click="handleClick(item.id)">Details</button></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./topStories.js"></script>
+</body>
+</html>
